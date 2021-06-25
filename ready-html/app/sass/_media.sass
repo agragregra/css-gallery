@@ -1,0 +1,40 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+
+// ≥768px
++media-breakpoint-down(sm)
+	.target-list a
+		pointer-events: none
+		h3::before
+			display: none
+
+// ≥576px
++media-breakpoint-down(xs)
+	.target
+		&-list li a
+			padding: 15px 0
+		&-gallery ul
+			padding-top: $gallery-top/2
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
