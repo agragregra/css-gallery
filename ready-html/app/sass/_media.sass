@@ -17,12 +17,12 @@
 			display: none
 
 // ≥576px
-+media-breakpoint-down(xs)
++media-breakpoint-down(sm)
 	.target
 		&-list li a
 			padding: 15px 0
 		&-gallery ul
-			padding-top: $gallery-top/2
+			padding-top: math.div($gallery-top, 2)
 
 
 /*==========  Mobile First  ==========*/

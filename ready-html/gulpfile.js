@@ -2,19 +2,18 @@ var syntax         = 'sass', // Syntax: sass or scss;
 		gulpVersion    = '4'; // Gulp version: 3 or 4
 		gmWatch        = false; // ON/OFF GraphicsMagick watching "img/_src" folder (true/false). Linux install gm: sudo apt update; sudo apt install graphicsmagick
 
-var gulp          = require('gulp'),
-		sass          = require('gulp-sass')(require('sass')),
-		browserSync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
-		cleancss      = require('gulp-clean-css'),
-		rename        = require('gulp-rename'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require('gulp-notify'),
-		rsync         = require('gulp-rsync'),
-		imageResize   = require('gulp-image-resize'),
-		imagemin      = require('gulp-imagemin'),
-		del           = require('del');
+var gulp         = require('gulp'),
+		sass         = require('gulp-sass')(require('sass')),
+		browserSync  = require('browser-sync'),
+		concat       = require('gulp-concat'),
+		uglify       = require('gulp-uglify'),
+		cleancss     = require('gulp-clean-css'),
+		rename       = require('gulp-rename'),
+		autoprefixer = require('gulp-autoprefixer'),
+		notify       = require('gulp-notify'),
+		rsync        = require('gulp-rsync'),
+		imageResize  = require('gulp-image-resize'),
+		del          = require('del');
 
 // Local Server
 gulp.task('browser-sync', function() {
@@ -56,13 +55,11 @@ gulp.task('scripts', function() {
 gulp.task('img1x', function() {
 	return gulp.src('app/img/_src/**/*.*')
 	.pipe(imageResize({ width: '50%' }))
-	.pipe(imagemin())
 	.pipe(gulp.dest('app/img/@1x/'))
 });
 gulp.task('img2x', function() {
 	return gulp.src('app/img/_src/**/*.*')
 	.pipe(imageResize({ width: '100%' }))
-	.pipe(imagemin())
 	.pipe(gulp.dest('app/img/@2x/'))
 });
 

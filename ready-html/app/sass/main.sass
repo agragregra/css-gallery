@@ -1,3 +1,5 @@
+@use 'sass:math'
+
 @import "vars"
 @import "fonts"
 @import "libs"
@@ -81,14 +83,15 @@ b, strong
 				position: relative
 				margin: 0 0 5px
 				font-size: 18px
+				font-weight: bold
 				&::before
 					font-family: 'Font Awesome 5 Free'
 					content: '\f0da'
 					font-size: 19px
 					line-height: 0
 					position: absolute
-					top: 15px
-					left: -16px
+					top: 11px
+					left: -15px
 					transform: translateX(-4px)
 					transition: all .35s ease
 					opacity: 0
